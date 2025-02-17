@@ -1,8 +1,9 @@
-@extends('layouts.app')
-{{-- titre de la page --}}
-@section('title', 'Accueil')
+{{-- navbar header --}}
+<x-navbar>
+    <x-slot:title>accueil</x-slot>
 
-@section('body')
-<h1>Mon site</h1>
-<p>Bienvenue sur l'accueil de mon site de ventes de jeux</p>
-@endsection
+</x-navbar>
+
+<h1>Accueil</h1>
+
+<p>bienvenue à tous</p>
