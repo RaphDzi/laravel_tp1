@@ -18,9 +18,9 @@
                 </div>
                 <div class="hidden md:block">
                   <div class="ml-10 flex items-baseline space-x-4">
-                    <a href="{{ url('/') }}" class="rounded-md px-3 py-2 text-sm font-medium  {{  request()->is('/') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" }}">Accueil</a>
-                    <a href="{{ url('/contact') }}" class="rounded-md px-3 py-2 text-sm font-medium {{  request()->is('contact') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}">contact</a>
-                    <a href="{{ url('/about') }}"class="rounded-md px-3 py-2 text-sm font-medium {{  request()->is('about') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}">A propos</a>
+                    <x-hover href="{{ url('/') }}" :active="request()->is('/')" class="">Accueil</x-hover>
+                    <x-hover href="{{ url('/contact') }}" :active="request()->is('/contact')" class="">Contact</x-hover>
+                    <x-hover href="{{ url('/about') }}" :active="request()->is('/A propos')" class="">A propos</x-hover>
                   </div>
                 </div>
               </div>
@@ -64,9 +64,9 @@
 
           <div class="md:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              <a href="{{ url('/') }}" class="block rounded-md px-3 py-2 text-base font-medium {{  request()->is('/') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}" aria-current="page">Accueil</a>
-              <a href="{{ url('/contact') }}" class="block rounded-md px-3 py-2 text-base font-medium {{  request()->is('contact') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}">contact</a>
-              <a href="{{ url('/about') }}" class="block rounded-md px-3 py-2 text-base font-medium {{  request()->is('about') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}">a propos</a>
+              <x-hover href="{{ url('/') }}" class="" aria-current="page">Accueil</x-hover>
+              <x-hover href="{{ url('/contact') }}" class="">contact</x-hover>
+              <x-hover href="{{ url('/about') }}" class="">a propos</x-hover>
             </div>
             <div class="border-t border-gray-700 pt-4 pb-3">
               <div class="flex items-center px-5">

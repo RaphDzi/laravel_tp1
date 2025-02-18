@@ -7,3 +7,8 @@
 <h1>Accueil</h1>
 
 <p>bienvenue à tous</p>
+
+
+@foreach ($jobs as $job)
+    <a href="/jobs/{{ $job['id'] }}">{{ $job['title'] }}</a>
+@endforeach
